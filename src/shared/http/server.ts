@@ -4,5 +4,6 @@ class AppServer {
   constructor(info: string) {
     this.app = info ?? 'Olá Dev'
   }
-
 }
+
+export default AppServer

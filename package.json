@@ -1,10 +1,13 @@
 {
   "name": "myapi",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "dist/server.js",
   "scripts": {
     "build": "rimraf dist && npx tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
   },
   "keywords": [],
@@ -13,6 +16,12 @@
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2"
