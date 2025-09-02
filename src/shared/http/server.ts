@@ -10,8 +10,9 @@ dotenv.config();
 
 const app = Express();
 
-app.use(Express.json());
 app.use(cors());
+app.use(Express.json());
+app.use(Express.urlencoded());
 
 app.use(routes);
 
