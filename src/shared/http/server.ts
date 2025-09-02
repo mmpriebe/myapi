@@ -1,9 +1,15 @@
-class AppServer {
-  private app: string
+import Express from 'express';
+import cors from 'cors';
 
-  constructor(info: string) {
-    this.app = info ?? 'Olá Dev'
-  }
-}
+const app = Express();
 
-export default AppServer
+app.use(Express.json());
+app.use(cors());
+
+app.get('/', (request, response) => {
+  response.send({ message: 'ok' });
+});
+
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});

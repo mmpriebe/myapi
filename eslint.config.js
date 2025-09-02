@@ -21,15 +21,18 @@ export default [
       // Regras recomendadas do TS
       ...tsPlugin.configs.recommended.rules,
 
-      // Regras customizadas
+      // Regras customizadas TS
       "@typescript-eslint/interface-name-prefix": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/ban-types": "off",
 
-      // Regras Prettier
+      // Prettier
       "prettier/prettier": "error",
+
+      // 👇 Sempre exigir ponto e vírgula
+      semi: ["error", "always"],
     },
   },
 
